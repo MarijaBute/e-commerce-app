@@ -15,6 +15,11 @@ export default function Header () {
             <li>Contact</li>
         </ul>
     </div> 
+
+    <div>
+        <h2>This is a test</h2>
+    </div>
+
     <div>
         <img src={cart} alt="cart"/>
         <img src={avatar} alt="avatar"/>
