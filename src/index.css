@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: Kumbh Sans, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header,
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
