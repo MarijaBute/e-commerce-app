@@ -18,27 +18,25 @@ export default function Header () {
                 {mobileMenu ? (
                      <img src={closeicon} alt="close-icon" className="close-icon" />
                 ) : (<img src={menuicon} alt="menu" className="menu-icon"/>)}
-            
-           
             </li>
             <li>
             <img src={logo} alt="logo"/> 
             </li>
         </ul>
         
-        <ul>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+        <ul className="menu-items">
+            <li><a href="#" className="menu-item">Collections</a></li>
+            <li><a href="#" className="menu-item">Men</a></li>
+            <li><a href="#" className="menu-item">Women</a></li>
+            <li><a href="#" className="menu-item">About</a></li>
+            <li><a href="#" className="menu-item">Contact</a></li>
         </ul>
     </div> 
     <div>
         <ul>
             <li>
-                <button onClick={() => setCartIsOpen(!cartIsOpen)} style={{border:"none", background:"transparent"}}>
-                <img src={cart} alt="cart"/>
+                <button onClick={() => setCartIsOpen(!cartIsOpen)} style={{border:"none", background:"transparent", cursor: "pointer"}}>
+                <img src={cart} alt="cart" className="cart-image"/>
                 </button>
             </li>
             <li>{cartIsOpen && <Cart />}</li>
@@ -46,7 +44,6 @@ export default function Header () {
             <img src={avatar} alt="avatar" style={{width:"45px"}} className="avatar"/>
             </li>
         </ul>
-        
     </div>
     
    </header>
