@@ -206,3 +206,70 @@ li a:hover {
   line-height: 30px;
 }
 
+
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center ;
+  justify-content: space-between;
+}
+
+.prices {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.price {
+  font-weight: bold;
+  color: #374151;
+  font-size: 24px; 
+}
+
+.sale {
+  background-color: #f0dbc1;
+  padding: 5px 10px; 
+  color: #f97316;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 5px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.quantity {
+  margin-top: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; 
+}
+
+.handle-quantity {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgrey;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  width: 200px;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #f97316;
+  padding: 10px 20px; 
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  width: 200px;
+  height: 45px;
+  cursor: pointer;
+}
