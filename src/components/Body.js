@@ -6,18 +6,19 @@ import plus from "../images/icon-plus.svg";
 
 export default function Body() {
   const [image, setImage] = useState(product_img1);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(0)
+  const [showGallery, setShowGallery] = useState(false)
 
   const handleMinus = () => {
     setAmount(amount - 1);
     if (amount <= 0) setAmount(0);
-  };
+  }
 
   return (
     <main>
       <div className="container">
         <div className="images-container">
-          <img src={image} alt="product_image" className="big-image" />
+          <img src={image} alt="product_image" className="big-image" onClick={() => setShowGallery(true)}/>
           <ul style={{ padding: 0 }}>
             <div className="gallery-images-container">
               {data.map((product) => (
