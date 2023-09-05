@@ -4,10 +4,14 @@ import { data } from "../data";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
 
-export default function Body() {
+export default function Body({setShowGallery, showGallery}) {
   const [image, setImage] = useState(product_img1);
   const [amount, setAmount] = useState(0)
-  const [showGallery, setShowGallery] = useState(false)
+
+
+  const toggleGallery = () => {
+    setShowGallery(!showGallery)
+  }
 
   const handleMinus = () => {
     setAmount(amount - 1);
@@ -18,7 +22,7 @@ export default function Body() {
     <main>
       <div className="container">
         <div className="images-container">
-          <img src={image} alt="product_image" className="big-image" onClick={() => setShowGallery(true)}/>
+          <img src={image} alt="product_image" className="big-image" onClick={toggleGallery}/>
           <ul style={{ padding: 0 }}>
             <div className="gallery-images-container">
               {data.map((product) => (

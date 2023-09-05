@@ -4,7 +4,7 @@ import iconPrev from "../images/icon-previous.svg"
 import iconNext from "../images/icon-next.svg"
 import iconClose from "../images/icon-close.svg"
 
-export default function ImageGallery ({setShowGallery}) {
+export default function ImageGallery ({setShowGallery, showGallery}) {
   const [selectedImage, setSelectedImage] = useState(data[0])
 
   const [products] = useState(data)
@@ -24,7 +24,7 @@ export default function ImageGallery ({setShowGallery}) {
   }
 
   return (
-    <div className="thumbnail-container" > 
+    <div className={`thumbnail-container ${showGallery ? "show" : ""}`}>
         <div className="main-image">
         <button className="btn-close" onClick={() => setShowGallery(false)}><img src={iconClose} alt="iconClose"/></button>
         <button className="btn-prev"><img src={iconPrev} alt="iconPrev" /></button>

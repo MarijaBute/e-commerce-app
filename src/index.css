@@ -158,6 +158,7 @@ li a:hover {
 .big-image {
   width: 100%;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .gallery-images-container {
@@ -336,6 +337,10 @@ li a:hover {
 }
 
 .thumbnail-container {
+  display: none;
+}
+
+.thumbnail-container.show {
   display: inline-block;
   align-items: center;
   position: absolute;
