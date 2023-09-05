@@ -4,8 +4,10 @@ import iconPrev from "../images/icon-previous.svg";
 import iconNext from "../images/icon-next.svg";
 import iconClose from "../images/icon-close.svg";
 
-export default function ImageGallery({ setShowGallery }) {
-  const [imageIndex, setImageIndex] = useState(0); 
+export default function ImageGallery({ setShowGallery, showGallery }) {
+  const [imageIndex, setImageIndex] = useState(data[0]); 
+
+  const products = useState(data);
 
   const handleImageClick = (index) => {
     setImageIndex(index);
@@ -29,7 +31,7 @@ export default function ImageGallery({ setShowGallery }) {
   const [selectedImage, setSelectedImage] = useState(data[imageIndex]);
 
   return (
-    <div className="thumbnail-container">
+    <div className={`thumbnail-container ${showGallery ? "show" : ""}`}>
       <div className="main-image">
         <button className="btn-close" onClick={() => setShowGallery(false)}>
           <img src={iconClose} alt="iconClose" />
