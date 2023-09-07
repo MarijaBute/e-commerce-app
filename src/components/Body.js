@@ -1,11 +1,11 @@
 import { useState } from "react";
-import product_img1 from "../images/image-product-1.jpg";
 import { data } from "../data";
+import { products } from "../products";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
 
 export default function Body({setShowGallery, showGallery}) {
-  const [image, setImage] = useState(product_img1);
+  const [image, setImage] = useState(data[0]);
   const [amount, setAmount] = useState(0)
 
 
@@ -25,14 +25,13 @@ export default function Body({setShowGallery, showGallery}) {
           <img src={image} alt="product_image" className="big-image" onClick={toggleGallery}/>
           <ul style={{ padding: 0 }}>
             <div className="gallery-images-container">
-              {data.map((product) => (
-                <div>
-                  <li onClick={() => setImage(product)}>
+              {data.map((product, imageIndex) => (
+                <div key={imageIndex}>
+                  <li onClick={() => setImage(product)} key={imageIndex}>
                     <img
                       src={product}
                       alt="product_image"
-                      className="gallery-images"
-                    />
+                      className="gallery-images"/>
                   </li>
                 </div>
               ))}
@@ -41,22 +40,24 @@ export default function Body({setShowGallery, showGallery}) {
         </div>
         <div className="info-container">
           <h5>SNEAKER COMPANY</h5>
-          <h1>Fall Limited Edition Sneakers</h1>
+          <h1>{products.name}</h1>
           <p>
             {" "}
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they’ll withstand everything
-            the weather can offer.
+            {products.description}
           </p>
           <div className="body-container">
+            <div>
             <ul className="prices">
-              <li className="price">$125.00</li>
+              <li className="price">${(products.price)-((products.price * products.discount)/100)}.00</li>
               <li className="sale">50%</li>
             </ul>
+            </div>
 
+            <div>
             <p style={{ color: "#374151" }}>
-              <s>$250.00</s>
+              <s>${products.price}.00</s>
             </p>
+            </div>
           </div>
 
           <div className="quantity">
@@ -80,5 +81,5 @@ export default function Body({setShowGallery, showGallery}) {
         </div>
       </div>
     </main>
-  );
+  )
 }

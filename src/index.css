@@ -210,13 +210,14 @@ li a:hover {
 
 .body-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center ;
-  justify-content: space-between;
+  align-items: flex-start ;
 }
 
 .prices {
   list-style-type: none;
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 20px; 
