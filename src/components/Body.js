@@ -3,9 +3,8 @@ import product_img1 from "../images/image-product-1.jpg";
 import { data } from "../data";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
-import ImageGallery from "./ImageGallery";
 
-export default function Body({setShowGallery,showGallery}) {
+export default function Body({setShowGallery, showGallery}) {
   const [image, setImage] = useState(product_img1);
   const [amount, setAmount] = useState(0)
 
@@ -18,17 +17,12 @@ export default function Body({setShowGallery,showGallery}) {
     setAmount(amount - 1);
     if (amount <= 0) setAmount(0);
   }
-  
-  const handleImageClick = () => {
-    setShowGallery(true);
-  } 
-  
+
   return (
     <main>
       <div className="container">
         <div className="images-container">
-        {showGallery && <ImageGallery setShowGallery={setShowGallery} />}
-          <img src={image} alt="product_image" className="big-image" onClick={handleImageClick}/>
+          <img src={image} alt="product_image" className="big-image" onClick={toggleGallery}/>
           <ul style={{ padding: 0 }}>
             <div className="gallery-images-container">
               {data.map((product) => (

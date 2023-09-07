@@ -8,13 +8,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header/>
       <Body setShowGallery={setShowGallery} showGallery={showGallery}/>
-      {showGallery && (
-        <ImageGallery
-          setShowGallery={setShowGallery}
-        />
-      )}
+      <ImageGallery setShowGallery={setShowGallery} showGallery={showGallery} />
     </div>
   );
 }
