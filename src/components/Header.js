@@ -16,7 +16,18 @@ export default function Header({ cartItems, removeFromCart }) {
         <ul>
           <li onClick={() => setMobileMenu(!mobileMenu)}>
             {mobileMenu ? (
+            <div className="mobile-background">
+            <div className={`mobile-menu-container ${mobileMenu ? "open" : ""}`}>
               <img src={closeicon} alt="close-icon" className="close-icon" />
+              <ul className="mobile-menu">
+                <li> <a href="#" className="menu-item-mobile">Collections</a></li>
+                <li><a href="#" className="menu-item-mobile"> Men</a></li>
+                <li><a href="#" className="menu-item-mobile"> Women</a></li>
+                 <li><a href="#" className="menu-item-mobile"> About</a></li>
+                <li><a href="#" className="menu-item-mobile">Contact</a></li>
+            </ul>
+            </div>
+            </div>
             ) : (
               <img src={menuicon} alt="menu" className="menu-icon" />
             )}
@@ -26,6 +37,7 @@ export default function Header({ cartItems, removeFromCart }) {
           </li>
         </ul>
 
+        <nav className={mobileMenu && "open"}>
         <ul className="menu-items">
           <li>
             <a href="#" className="menu-item">
@@ -53,6 +65,7 @@ export default function Header({ cartItems, removeFromCart }) {
             </a>
           </li>
         </ul>
+        </nav>
       </div>
       <div>
         <ul>

@@ -23,6 +23,8 @@ ul {
   border-bottom: 1px solid lightgrey;
 }
 
+
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -151,6 +153,16 @@ li a:hover {
   padding: 50px 5% 100px 5%;
 }
 
+@media (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+  }
+}
+
 .images-container {
   width: 30%;
 }
@@ -161,6 +173,8 @@ li a:hover {
   cursor: pointer;
 }
 
+
+
 .gallery-images-container {
   display: flex;
   flex-direction: row;
@@ -168,6 +182,12 @@ li a:hover {
   width: 100%;
   padding: 0;
   gap: 10px;
+}
+
+@media (max-width: 1023px) {
+  .gallery-images-container {
+    display: none;
+  }
 }
 
 .gallery-images {
@@ -382,4 +402,52 @@ li a:hover {
   justify-content: center;
   font-weight: bold;
   color: grey;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.menu-item-mobile {
+  color: black;
+}
+
+.mobile-menu-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white; /* Set the background color to white */
+  z-index: 999; /* Ensure it's above all other content */
+  transition: transform 0.3s ease; /* Add a smooth transition for animation */
+  transform: translateX(-100%);
+}
+
+.mobile-menu-container.open {
+  transform: translateX(0); /* Slide it onto the screen when open */
+}
+
+.mobile-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); ;
+  width: 100%;
+  height: 100%;
+  margin-left: 300px;
+  z-index: 998;
+}
+
+.close-icon {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 20px;
 }
