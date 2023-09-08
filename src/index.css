@@ -364,3 +364,22 @@ li a:hover {
   height: auto; 
   border-radius: 10px; 
 }
+
+.cart-quantity {
+  position: absolute;
+  background-color: #f97316;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 30px;
+  margin-left: -5px;
+  top: 15px;
+  font-size: 10px;
+}
+
+.emptyCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: grey;
+}

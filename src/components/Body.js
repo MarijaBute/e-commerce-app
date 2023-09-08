@@ -4,8 +4,9 @@ import { products } from "../products";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
 
-export default function Body({setShowGallery, showGallery, amount, setAmount}) {
+export default function Body({setShowGallery, showGallery, addToCart}) {
   const [image, setImage] = useState(data[0]);
+  const [amount, setAmount] = useState(0)
 
 
   const toggleGallery = () => {
@@ -16,6 +17,15 @@ export default function Body({setShowGallery, showGallery, amount, setAmount}) {
     setAmount(amount - 1);
     if (amount <= 0) setAmount(0);
   }
+
+  const handleAddToCart = () => {
+    if (amount > 0) {
+      addToCart(products, amount); 
+      setAmount(0); 
+    } 
+  };
+
+  
 
   return (
     <main>
@@ -74,7 +84,7 @@ export default function Body({setShowGallery, showGallery, amount, setAmount}) {
             </ul>
 
             <div>
-              <button className="add-to-cart">Add to cart</button>
+              <button className="add-to-cart" onClick={handleAddToCart}>Add to cart</button>
             </div>
           </div>
         </div>
