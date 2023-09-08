@@ -6,7 +6,7 @@ import closeicon from "../images/icon-close.svg"
 import { useState } from "react"
 import Cart from "./Cart"
 
-export default function Header () {
+export default function Header ({props}) {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [cartIsOpen, setCartIsOpen] = useState(false);
 
@@ -39,7 +39,7 @@ export default function Header () {
                 <img src={cart} alt="cart" className="cart-image"/>
                 </button>
             </li>
-            <li>{cartIsOpen && <Cart />}</li>
+            <li>{cartIsOpen && <Cart props={props}/>}</li>
             <li className="avatar-image">
             <img src={avatar} alt="avatar" style={{width:"45px"}} className="avatar"/>
             </li>

@@ -4,9 +4,8 @@ import { products } from "../products";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
 
-export default function Body({setShowGallery, showGallery}) {
+export default function Body({setShowGallery, showGallery, amount, setAmount}) {
   const [image, setImage] = useState(data[0]);
-  const [amount, setAmount] = useState(0)
 
 
   const toggleGallery = () => {
