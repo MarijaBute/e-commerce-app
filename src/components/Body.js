@@ -3,6 +3,8 @@ import { data } from "../data";
 import { products } from "../products";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
+import iconPrev from "../images/icon-previous.svg";
+import iconNext from "../images/icon-next.svg";
 
 export default function Body({setShowGallery, showGallery, addToCart}) {
   const [image, setImage] = useState(data[0]);
@@ -31,7 +33,9 @@ export default function Body({setShowGallery, showGallery, addToCart}) {
     <main>
       <div className="container">
         <div className="images-container">
+          <img src={iconPrev} className="prev-tag" />
           <img src={image} alt="product_image" className="big-image" onClick={toggleGallery}/>
+          <img src={iconNext} className="next-tag" />
           <ul style={{ padding: 0 }}>
             <div className="gallery-images-container">
               {data.map((product, imageIndex) => (

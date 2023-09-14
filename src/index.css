@@ -173,6 +173,23 @@ li a:hover {
   cursor: pointer;
 }
 
+.prev-tag, .next-tag {
+  display: none;
+}
+
+
+@media (max-width: 975px) {
+  .images-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .big-image {
+    border-radius: 0%;
+  }
+
+}
 
 
 .gallery-images-container {
@@ -235,6 +252,19 @@ li a:hover {
   align-items: flex-start ;
 }
 
+@media (max-width: 975px) {
+  .info-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .quantity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
 .prices {
   list-style-type: none;
   padding: 0;

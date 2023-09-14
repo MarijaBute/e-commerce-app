@@ -39,31 +39,11 @@ export default function Header({ cartItems, removeFromCart }) {
 
         <nav className={mobileMenu && "open"}>
         <ul className="menu-items">
-          <li>
-            <a href="#" className="menu-item">
-              Collections
-            </a>
-          </li>
-          <li>
-            <a href="#" className="menu-item">
-              Men
-            </a>
-          </li>
-          <li>
-            <a href="#" className="menu-item">
-              Women
-            </a>
-          </li>
-          <li>
-            <a href="#" className="menu-item">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="menu-item">
-              Contact
-            </a>
-          </li>
+          <li><a href="#" className="menu-item">Collections</a></li>
+          <li><a href="#" className="menu-item">Men</a></li>
+          <li><a href="#" className="menu-item">Women</a></li>
+          <li><a href="#" className="menu-item">About</a></li>
+          <li><a href="#" className="menu-item">Contact</a></li>
         </ul>
         </nav>
       </div>
