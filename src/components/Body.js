@@ -49,14 +49,14 @@ export default function Body({ setShowGallery, showGallery, addToCart }) {
           <ImageGalleryMobile showGallery={true} />
         ) : (
           <div className="images-container">
-            <img src={iconPrev} className="prev-tag" />
+            <img src={iconPrev} className="prev-tag" alt="previousTag" />
             <img
               src={image}
               alt="product_image"
               className="big-image"
               onClick={toggleGallery}
             />
-            <img src={iconNext} className="next-tag" />
+            <img src={iconNext} className="next-tag" alt="nextTag" />
             <ul style={{ padding: 0 }}>
               <div className="gallery-images-container">
                 {data.map((product, imageIndex) => (

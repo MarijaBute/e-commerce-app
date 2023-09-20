@@ -20,11 +20,11 @@ export default function Header({ cartItems, removeFromCart }) {
             <div className={`mobile-menu-container ${mobileMenu ? "open" : ""}`}>
               <img src={closeicon} alt="close-icon" className="close-icon" />
               <ul className="mobile-menu">
-                <li> <a href="#" className="menu-item-mobile">Collections</a></li>
-                <li><a href="#" className="menu-item-mobile"> Men</a></li>
-                <li><a href="#" className="menu-item-mobile"> Women</a></li>
-                 <li><a href="#" className="menu-item-mobile"> About</a></li>
-                <li><a href="#" className="menu-item-mobile">Contact</a></li>
+                <li> <a className="menu-item-mobile">Collections</a></li>
+                <li><a className="menu-item-mobile"> Men</a></li>
+                <li><a className="menu-item-mobile"> Women</a></li>
+                 <li><a className="menu-item-mobile"> About</a></li>
+                <li><a className="menu-item-mobile">Contact</a></li>
             </ul>
             </div>
             </div>
@@ -39,11 +39,11 @@ export default function Header({ cartItems, removeFromCart }) {
 
         <nav className={mobileMenu && "open"}>
         <ul className="menu-items">
-          <li><a href="#" className="menu-item">Collections</a></li>
-          <li><a href="#" className="menu-item">Men</a></li>
-          <li><a href="#" className="menu-item">Women</a></li>
-          <li><a href="#" className="menu-item">About</a></li>
-          <li><a href="#" className="menu-item">Contact</a></li>
+          <li><a className="menu-item">Collections</a></li>
+          <li><a className="menu-item">Men</a></li>
+          <li><a className="menu-item">Women</a></li>
+          <li><a className="menu-item">About</a></li>
+          <li><a className="menu-item">Contact</a></li>
         </ul>
         </nav>
       </div>

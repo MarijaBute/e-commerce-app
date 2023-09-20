@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { data } from "../data";
 import iconPrev from "../images/icon-previous.svg";
 import iconNext from "../images/icon-next.svg";
-import iconClose from "../images/icon-close.svg";
 
-export default function ImageGallery({ setShowGallery, showGallery }) {
-  const [selectedImage, setSelectedImage] = useState(data[0]);
+export default function ImageGallery({ showGallery }) {
   const [products] = useState(data);
   const [imageIndex, setImageIndex] = useState(0);
   const [activeThumbnailIndex, setActiveThumbnailIndex] = useState(0)
@@ -14,10 +12,6 @@ export default function ImageGallery({ setShowGallery, showGallery }) {
     setActiveThumbnailIndex(imageIndex); 
   }, [imageIndex]);
 
-  const handleImageClick = (image, index) => {
-    setSelectedImage(image);
-    setImageIndex(index);
-  };
 
   const handleNextBtnClick = () => {
     if (imageIndex < products.length - 1) {
