@@ -48,7 +48,7 @@ export default function Header({ cartItems, removeFromCart }) {
         </nav>
       </div>
       <div>
-        <ul>
+        <ul className="cart-avatar">
           <li>
             <button
               onClick={() => setCartIsOpen(!cartIsOpen)}
@@ -71,7 +71,6 @@ export default function Header({ cartItems, removeFromCart }) {
             <img
               src={avatar}
               alt="avatar"
-              style={{ width: "45px" }}
               className="avatar"
             />
           </li>
