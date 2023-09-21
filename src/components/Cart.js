@@ -1,19 +1,12 @@
 import thumbnail from "../images/image-product-1-thumbnail.jpg";
 import deleteicon from "../images/icon-delete.svg";
-import { useState } from "react";
 
 export default function Cart({ cartItems, removeFromCart }) {
-  const [localCartItems, setLocalCartItems] = useState(cartItems);
+  const cartIsEmpty = cartItems.length === 0;
 
   const handleRemoveFromCart = (itemId) => {
-    removeFromCart(itemId); 
-    const updatedLocalCartItems = localCartItems.filter(
-      (item) => item.id !== itemId
-    );
-    setLocalCartItems(updatedLocalCartItems);
+    removeFromCart(itemId);
   };
-
-  const cartIsEmpty = localCartItems.length === 0;
 
   return (
     <div className="cart-container">
@@ -22,7 +15,7 @@ export default function Cart({ cartItems, removeFromCart }) {
       {cartIsEmpty ? (
         <p className="emptyCart">Your cart is empty</p>
       ) : (
-        localCartItems.map((item, index) => (
+        cartItems.map((item, index) => (
           <div className="cart-item" key={index}>
             <img
               src={thumbnail}
@@ -46,10 +39,6 @@ export default function Cart({ cartItems, removeFromCart }) {
             </div>
           </div>
         ))
-      )}
-
-      {!cartIsEmpty && (
-        <button className="checkout">Checkout</button>
       )}
     </div>
   );
