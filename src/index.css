@@ -12,6 +12,7 @@ ul {
   gap: 5%;
   align-items: center;
   justify-content: space-between;
+  padding-inline-start: 0px;
 }
 
 .site-header {
@@ -23,8 +24,17 @@ ul {
   border-bottom: 1px solid lightgrey;
 }
 
+ul.menu-items {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
 .avatar {
   width: 45px;
+}
+
+.cart-avatar {
+  padding-inline-end: 30px;
 }
 
 @media(max-width: 1023px) {
@@ -50,7 +60,9 @@ ul {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-start;
+  gap: 50px;
+  padding-inline-start: 30px;
 }
 
 .menu-icon:hover {
@@ -183,6 +195,10 @@ li a:hover {
     justify-content: center;
     align-items: center;
     gap: 4%;
+  }
+
+  .site-nav {
+    padding-inline-start: 0px;
   }
 }
 
@@ -590,4 +606,10 @@ li a:hover {
   top: 20px;
   left: 20px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 313px) { 
+  .site-nav {
+    max-width: 100px;
+  }
 }

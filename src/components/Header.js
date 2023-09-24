@@ -47,7 +47,7 @@ export default function Header({ cartItems, removeFromCart }) {
         </ul>
         </nav>
       </div>
-      <div>
+      <div >
         <ul className="cart-avatar">
           <li>
             <button
