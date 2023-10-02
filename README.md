@@ -28,7 +28,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* You need npm to be installed on your local machine. For details please use the following site :https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+* You need npm to be installed on your local machine. For details please use the following site: 
+https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
 ### Setup
 
