@@ -1,22 +1,21 @@
-# E-Commerce Project
+# E-Commerce Product Page 
 
-React-based one-page E-Commerce website that features a dynamic shopping experience.
+React-based e-commerce product page that features a dynamic shopping experience.
 
 ![screenshot](./src/images/app_desktop_screenshot1.png)
 
-The project allows users to browse products, view a product image gallery with a scrolling option, add products to their cart, including the option to choose the number of items to be added in the cart and the option to delete the items from the cart.
+The project allows users to view a product image gallery with a scrolling option, add product to their cart, including the option to choose the quantity of product to be added in the cart and the option to remove the items from the cart.
 
 ## Built With
 
-- Java Script
+- JavaScript
 - React.js
 - HTML5
 - CSS3
-- tailwind-css
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://ecommerce-product-page-react-project.netlify.app/)
 
 ## Getting Started
 
@@ -57,7 +56,7 @@ npm start;
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/vericamitreva)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/verica-mitreva-464612226/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vericamitreva)
 
 👤 **Author2**
 
